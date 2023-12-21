@@ -1,4 +1,10 @@
-using try1solid_webApi.Core.Services;
+//using try1solid_webApi.Core.Services;
+using Solid.Core.Models;
+using Solid.Core.Services;
+using Solid.Service;
+using Solid.Core.Repositories;
+using Solid.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,10 +16,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IStationRepository, StationRepository>();
-builder.Services.AddScoped<IProductServices, ProductServices>();
-builder.Services.AddScoped<IStationServices, StationServices>();
-builder.Services.AddScoped<IClientService, ClientService>();
-builder.Services.AddSingleton<DataContext>();
+builder.Services.AddScoped<IProductServices, ProductService>();
+builder.Services.AddScoped<IStationServices, StationService>();
+builder.Services.AddScoped<IClientServices, ClientServices>();
+//builder.Services.AddSingleton<DataContext>();
+builder.Services.AddDbContext<DataContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

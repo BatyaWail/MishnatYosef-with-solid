@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Solid.Service
 {
-    internal class ProductService : IProductServices
+    public class ProductService : IProductServices
     {
         private readonly IProductRepository _productRepository;
         public ProductService(IProductRepository productRepository)

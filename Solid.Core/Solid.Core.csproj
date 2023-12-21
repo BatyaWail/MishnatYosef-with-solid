@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\try1solid-webApi\try1solid-webApi.csproj" />
-  </ItemGroup>
-
 </Project>

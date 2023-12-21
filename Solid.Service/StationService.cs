@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Solid.Service
 {
-    internal class StationService : IStationServices
+    public class StationService : IStationServices
     {
         private readonly IStationRepository _stationRepository;
         public StationService(IStationRepository stationRepository)

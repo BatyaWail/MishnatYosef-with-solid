@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 using Solid.Core.Models;
 using Solid.Core.Repositories;
 using System;
@@ -24,22 +24,22 @@ namespace Solid.Data
 
         public Client GetById(int id)
         {
-           return _dataContext.clients.Find(x => x.Id == id);
+           return _dataContext.clients.ToList().Find(x => x.Id == id);
         }
         public List<Client> GetList()
         {
-            return _dataContext.clients;
+            return _dataContext.clients.ToList();
         }
 
         public void Remove(int id)
         {
-            _dataContext.clients.Remove(_dataContext.clients.Find(x => x.Id == id));
+            _dataContext.clients.Remove(_dataContext.clients.ToList().Find(x => x.Id == id));
         }
 
         public void Update(int id, Client client)
         {
-            int x = _dataContext.clients.FindIndex(x => x.Id == id);
-            _dataContext.clients[x] = client;
+            int x = _dataContext.clients.ToList().FindIndex(x => x.Id == id);
+            _dataContext.clients.ToList()[x] = client;
         }
     }
 }

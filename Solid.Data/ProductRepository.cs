@@ -18,24 +18,24 @@ namespace Solid.Data
 
         public Product GetById(int id)
         {
-            return _dataContext.products.Find(x => x.Id == id);
+            return _dataContext.products.ToList().Find(x => x.Id == id);
 
         }
 
         public List<Product> GetList()
         {
-            return _dataContext.products;
+            return _dataContext.products.ToList();
         }
 
         public void Remove(int id)
         {
-            _dataContext.products.Remove(_dataContext.products.Find(x => x.Id == id));
+            _dataContext.products.Remove(_dataContext.products.ToList().Find(x => x.Id == id));
         }
 
         public void Update(int id, Product product)
         {
-            int x = _dataContext.products.FindIndex(x => x.Id == id);
-            _dataContext.products[x] = product;
+            int x = _dataContext.products.ToList().FindIndex(x => x.Id == id);
+            _dataContext.products.ToList()[x] = product;
         }
     }
 }

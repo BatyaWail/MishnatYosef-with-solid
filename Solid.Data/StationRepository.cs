@@ -23,24 +23,24 @@ namespace Solid.Data
 
         public Station GetById(int id)
         {
-            return _dataContext.stations.Find(x => x.Id == id);
+            return _dataContext.stations.ToList().Find(x => x.Id == id);
 
         }
 
         public List<Station> GetList()
         {
-            return _dataContext.stations;
+            return _dataContext.stations.ToList();
         }
 
         public void Remove(int id)
         {
-            _dataContext.stations.Remove(_dataContext.stations.Find(x => x.Id == id));
+            _dataContext.stations.Remove(_dataContext.stations.ToList().Find(x => x.Id == id));
         }
 
         public void Update(int id, Station station)
         {
-            int x = _dataContext.stations.FindIndex(x => x.Id == id);
-            _dataContext.stations[x] = station;
+            int x = _dataContext.stations.ToList().FindIndex(x => x.Id == id);
+            _dataContext.stations.ToList()[x] = station;
         }
     }
 }

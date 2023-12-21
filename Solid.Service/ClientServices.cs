@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿//using Microsoft.AspNetCore.Mvc;
 using Solid.Core.Models;
 using Solid.Core.Repositories;
 using Solid.Core.Services;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Solid.Service
 {
-    internal class ClientServices : IClientServices
+    public class ClientServices : IClientServices
     {
         private readonly IClientRepository _clientRepository;
         public ClientServices(IClientRepository clientRepository)

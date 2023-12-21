@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "try1solid-webApi", "try1solid-webApi\try1solid-webApi.csproj", "{789C6587-FED2-4BE2-8654-B268FBFEFB6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Api", "try1solid-webApi\Solid.Api.csproj", "{789C6587-FED2-4BE2-8654-B268FBFEFB6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Core", "Solid.Core\Solid.Core.csproj", "{544B9826-BFA9-46D1-9C6B-CE634E270054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Core", "Solid.Core\Solid.Core.csproj", "{544B9826-BFA9-46D1-9C6B-CE634E270054}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Data", "Solid.Data\Solid.Data.csproj", "{B5CCB586-4471-40DB-B816-31A0604343E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Data", "Solid.Data\Solid.Data.csproj", "{B5CCB586-4471-40DB-B816-31A0604343E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid.Service", "Solid.Service\Solid.Service.csproj", "{70481558-3923-4388-A686-4CC28521FCF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solid.Service", "Solid.Service\Solid.Service.csproj", "{70481558-3923-4388-A686-4CC28521FCF2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9693040-2125-48EF-8CBD-12CCA89F6F66}"
 EndProject
